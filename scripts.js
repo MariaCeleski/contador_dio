@@ -1,31 +1,31 @@
 let currentNumberWrapper = document.getElementById("currentNumber")
-const INCREMENT = document.getElementById("increment")
-const DECREMENT = document.getElementById("decrement")
+const increment = document.getElementById("Increment")
+const decrement = document.getElementById("Decrement")
 let count = 0
 
 
-INCREMENT.addEventListener("click",
-    function increment() {
+increment.addEventListener("click",
+    function Increment() {
         count++;
         if (count <= 10){
             currentNumberWrapper.innerHTML = count;
         }
 
         if (count >= 0){
-            currentNumberWrapper.classList.remove("negative")
+            currentNumberWrapper.classList.remove("redcolor")
         }
     }
 )
 
-DECREMENT.addEventListener("click",
-    function decrement() {
+decrement.addEventListener("click",
+    function Decrement() {
         count--;
         if (count >= -10) {
             currentNumberWrapper.innerHTML = count;
         } 
 
-        if (count < 0){
-            currentNumberWrapper.classList.add("negative")
+        if (count <= 0){
+            currentNumberWrapper.classList.add("redcolor")
         }
     }
 )
